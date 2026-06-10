@@ -1,0 +1,70 @@
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image:url('fundo site.png');
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    text-align:center;
+    animation:aparecer 1.2s ease;
+}
+
+.numero{
+    display:inline-block;
+    font-size:5rem;
+    font-weight:700;
+    color:#ffffff;
+    animation:pulse 2s infinite;
+}
+.logo{
+    width: 180px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.15));
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+h1{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-top:10px;
+}
+
+p{
+    color:#ffffff;
+    margin-top:10px;
+    font-size:1rem;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
