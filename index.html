@@ -10,6 +10,7 @@
 
 <style>
 
+
 /* =========================
 CORES PERSONALIZADAS
 ========================= */
@@ -29,7 +30,7 @@ CORES PERSONALIZADAS
 }
 
 body{
-    font-family:'Belleza', serif;
+    font-family:'arial', sans-serif;
     background-image:url('fundo_branco.jpg');
     background-size:cover;
     background-position:center;
@@ -55,7 +56,7 @@ h3,
 .logo h1,
 .modal-header h2,
 #tituloServico, .section-title {
-    font-family:'Gallient', serif;
+    font-family: Arial, Helvetica, sans-serif;
     color:var(--dark);
 }
 
@@ -165,7 +166,7 @@ letter-spacing:1px;
 
 .modal-avisos h2{
 margin:20px 0 30px;
-font-family:'Gallient', serif;
+font-family: 'arial', sans-serif;
 font-size:42px;
 }
 
@@ -225,7 +226,7 @@ animation: fadeIn .3s ease;
 
 .modal h1, h2, p, a, li, h3{
 color: var(--gold);
-font-family: 'Gallient', serif;
+font-family: 'arial', sans-serif;
 }
 
 .modal-content{
@@ -234,23 +235,47 @@ width: 90%;
 max-width: 600px;
 margin: 50px auto;
 padding: 30px;
+position:relative;
 border-radius: 24px;
 box-shadow: 0 10px 40px rgba(131, 131, 131, 0.2);
 animation: slideUp .4s ease;
 }
 
 .close{
-cursor: pointer;
-font-size: 32px;
-font-weight: bold;
-color: var(--gold);
-transition: .3s;
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:38px;
+    height:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #d8d4ca;
+
+    border-radius:50%;
+
+    background:#f8f6f1;
+
+    color:#262626;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
 }
 
 .close:hover{
-opacity: .7;
-}
 
+    background:#262626;
+
+    color:#fff;
+}
 /* =========================
 FORMULÁRIOS
 ========================= */
@@ -301,7 +326,7 @@ position:relative;
 }
 
 .modal-header h2{
-font-family:'Gallient', serif;
+font-family: 'arial', sans-serif;
 font-size:3rem;
 font-weight:400;
 margin-bottom:10px;
@@ -309,7 +334,7 @@ color:#e9e6db;
 }
 
 .modal-header p{
-font-family:'Belleza', sans-serif;
+font-family: 'arial', sans-serif;
 font-size:15px;
 max-width:500px;
 margin:auto;
@@ -360,7 +385,7 @@ margin-bottom:20px;
 }
 
 .servico-card h3{
-font-family:'Gallient', serif;
+font-family: 'arial', sans-serif;
 font-size:28px;
 font-weight:400;
 color:#262626;
@@ -368,11 +393,12 @@ margin-bottom:10px;
 }
 
 .servico-card p{
-font-family:'Belleza', sans-serif;
+font-family: 'arial', sans-serif;
 color:#666;
 line-height:1.7;
 font-size:14px;
 }
+
 /* =========================
 LISTA DE SERVIÇOS
 ========================= */
@@ -471,7 +497,7 @@ line-height: 1.7;
 
     border-radius:16px;
 
-    font-family:'Belleza', serif;
+    font-family: 'arial', sans-serif;
     font-size:15px;
     font-weight:600;
 
