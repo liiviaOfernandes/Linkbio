@@ -142,6 +142,70 @@ line-height:1.7;
 .sobre h2{
 color:var(--off-white);
 }
+/* =========================
+Modal Avisos
+========================= */
+.modal-avisos{
+max-width:700px;
+background:#f5f4f1;
+border-radius:30px;
+padding:40px;
+}
+
+.tag-aviso{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+background:#262626;
+color:#fff;
+font-size:12px;
+letter-spacing:1px;
+}
+
+.modal-avisos h2{
+margin:20px 0 30px;
+font-family:'Gallient', serif;
+font-size:42px;
+}
+
+.aviso-item{
+padding:18px;
+background:white;
+border-radius:18px;
+margin-bottom:12px;
+border-left:4px solid #262626;
+}
+
+.aviso-item h3{
+margin-bottom:8px;
+font-size:18px;
+}
+
+.aviso-item p{
+color:#666;
+line-height:1.5;
+}
+
+.btn-entendi{
+width:100%;
+margin-top:20px;
+background:#262626;
+color:white;
+border:none;
+padding:16px;
+border-radius:999px;
+cursor:pointer;
+}
+
+.btn-fechar{
+position:absolute;
+top:20px;
+right:20px;
+background:none;
+border:none;
+font-size:28px;
+cursor:pointer;
+}
 
 /* =========================
 MODAL BASE
@@ -689,7 +753,6 @@ margin-top:30px;
         </div>
 
         <br>
-
         <button type="button" class="btn btn-outline" onclick="abrirModalServicos()">
         Ver Todos os Serviços
         </button>
@@ -743,11 +806,7 @@ margin-top:30px;
                 <img src="escritura-do-titulo.png" alt="">
                 <h3>2ª via de procurações/escrituras</h3>
                 <p>As certidões no tabelionato de notas são aquelas relativas 
-                    às procurações e escrituras lavradas no cartório. 
-                    Caso a parte necessite de uma segunda-via de procuração 
-                    ou escritura, basta solicitar pelo nosso site, 
-                    comparecer ao cartório ou ainda pelo site da CENPROC 
-                    ( https://cenproc.org.br/private/consult ). 
+                    às procurações e escrituras lavradas no cartório.  
                     É comum a expedição de segunda-via (certidão) de 
                     procuração para lavratura de escrituras, tendo em 
                     vista os tabelionatos exigirem comprovação de que 
@@ -756,45 +815,20 @@ margin-top:30px;
 
             <div class="servico-card">
                 <img src="casa.png" alt="">
-                <h3>Ata Notarial de Usucapião</h3>
-                <p>É documento público, exigido por lei, que atesta o 
-                    tempo de posse do requerente e seus antecessores, 
-                    conforme o caso e suas circunstâncias.</p>
-            </div>
-
-            <div class="servico-card">
-                <img src="documento.png" alt="">
-                <h3>Autorização Eletrônica de Viagem</h3>
-                <p>A AEV - Autorização Eletrônica de Viagem é o 
-                    requerimento eletrônico para autorizar viagens de 
-                    crianças e adolescentes desacompanhados de ambos 
-                    ou um de seus pais, a ser emitida, exclusivamente, 
-                    por intermédio do Sistema de Atos Notariais 
-                    Eletrônicos – e-Notariado, regulamentada pelo 
-                    Conselho Nacional de Justiça (CNJ) conforme 
-                    Provimento n. 103/2020.</p>
+                <h3>Ata Notarial</h3>
+                <p>Sua principal função é a pré-produção de provas, 
+                    evitando que evidências se percam, sejam apagadas ou alteradas. 
+                    Ela transforma acontecimentos do dia a dia em provas robustas 
+                    e inquestionáveis para processos judiciais ou administrativos.</p>
             </div>
 
             <div class="servico-card">
                 <img src="aprovar.png" alt="">
                 <h3>Autenticação</h3>
-                <p>A AEV - Autorização Eletrônica de Viagem é o 
-                    requerimento eletrônico para autorizar viagens de 
-                    crianças e adolescentes desacompanhados de ambos 
-                    ou um de seus pais, a ser emitida, exclusivamente, 
-                    por intermédio do Sistema de Atos Notariais 
-                    Eletrônicos – e-Notariado, regulamentada pelo 
-                    Conselho Nacional de Justiça (CNJ) conforme 
-                    Provimento n. 103/2020.</p>
-            </div>
-
-            <div class="servico-card">
-                <img src="sentença.png" alt="">
-                <h3>Carta de sentença</h3>
-                <p>A carta de sentença equivale a: “formal de partilha”, 
-                    “carta de arrematação” ou “carta de adjudicação”, 
-                    “mandados de registro” ou de “averbação/retificação” 
-                    do Poder Judiciário.</p>
+                <p>A autenticação em cartório é o ato pelo qual o tabelião (ou escrevente) 
+                    atesta que a cópia de um documento é fiel e idêntica ao original. 
+                    O procedimento confere fé pública, garantindo segurança jurídica 
+                    para o uso da cópia em processos, matrículas, ou abertura de contas.</p>
             </div>
 
             <div class="servico-card">
@@ -826,15 +860,6 @@ margin-top:30px;
                     realizada na presença de ambos os pais, declarando a 
                     vontade de emancipar o filho menor. Deverão comparecer 
                     os pais e, sempre que possível, o menor emancipando.</p>
-            </div>
-
-            <div class="servico-card">
-                <img src="contrato.png" alt="">
-                <h3>Escrituras DAV</h3>
-                <p>DAV - Declaração Antecipada de Vontade
-
-O Código de Normas de Minas Gerais - Provimento nº 260/CGJ-MG, disciplina a DAV da seguinte forma: CAPÍTULO X
-</p>
             </div>
 
         </div>
@@ -873,6 +898,53 @@ O Código de Normas de Minas Gerais - Provimento nº 260/CGJ-MG, disciplina a DA
             Iniciar Atendimento
         </button>
     </div>
+</div>
+
+<div id="modalAvisos" class="modal">
+
+    <div class="modal-content modal-avisos">
+
+        <button class="btn-fechar"
+            onclick="fecharAvisos()">
+            ×
+        </button>
+
+        <span class="tag-aviso">
+            INFORMAÇÕES IMPORTANTES
+        </span>
+
+        <h2>Antes de iniciar seu atendimento</h2>
+
+        <div class="aviso-item">
+            <h3>Reconhecimento por Autenticidade</h3>
+            <p>
+                Exige a presença da pessoa que irá assinar o documento.
+            </p>
+        </div>
+
+        <div class="aviso-item">
+            <h3>Documento de Identificação</h3>
+            <p>
+                Apresente documento original, legível e em bom estado
+                de conservação.Recomendamos documentos emitidos há menos de 10 anos.
+            </p>
+        </div>
+
+        <div class="aviso-item">
+            <h3>Inventário e Escrituras</h3>
+            <p>
+                Os documentos podem variar conforme cada caso.
+                Nossa equipe fará a conferência antes do atendimento.
+            </p>
+        </div>
+
+        <button class="btn-entendi"
+            onclick="fecharAvisos()">
+            Entendi
+        </button>
+
+    </div>
+
 </div>
 
 <!--- Localização -->
@@ -926,6 +998,26 @@ O Código de Normas de Minas Gerais - Provimento nº 260/CGJ-MG, disciplina a DA
 
 <!--- Scripts -->
 <script>
+window.onload = function(){
+
+    if(!localStorage.getItem("avisosLidos")){
+
+        document.getElementById("modalAvisos")
+            .style.display = "block";
+    }
+}
+
+function fecharAvisos(){
+
+    document.getElementById("modalAvisos")
+        .style.display = "none";
+
+    localStorage.setItem(
+        "avisosLidos",
+        "sim"
+    );
+}
+
 let servicoAtual = "";
 
 const servicos = {
