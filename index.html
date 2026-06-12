@@ -142,7 +142,10 @@ line-height:1.7;
 .sobre h2{
 color:var(--off-white);
 }
-/* =========================
+/* ========================================
+MODAIS - 2º TABELIONATO DE NOTAS
+======================================== */
+armonize esses modal "/* =========================
 Modal Avisos
 ========================= */
 .modal-avisos{
@@ -263,7 +266,7 @@ font-size: 15px;
 }
 
 .modal button{
-width: 100%;
+height: 50px;
 margin-top: 20px;
 padding: 16px;
 border: none;
@@ -498,7 +501,6 @@ line-height: 1.7;
 
     transform:translateY(0);
 }
-
 /* =========================
 ANIMAÇÕES
 ========================= */
@@ -998,13 +1000,11 @@ margin-top:30px;
 
 <!--- Scripts -->
 <script>
-window.onload = function(){
+window.onload = function() {
 
-    if(!localStorage.getItem("avisosLidos")){
+    document.getElementById("modalAvisos")
+        .style.display = "block";
 
-        document.getElementById("modalAvisos")
-            .style.display = "block";
-    }
 }
 
 function fecharAvisos(){
@@ -1012,10 +1012,6 @@ function fecharAvisos(){
     document.getElementById("modalAvisos")
         .style.display = "none";
 
-    localStorage.setItem(
-        "avisosLidos",
-        "sim"
-    );
 }
 
 let servicoAtual = "";
